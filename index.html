@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3 – 2016 Chevy Camaro</title>
+     <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header section with page title and instructions -->
+<header>
+    <h1>2016 Chevy Camaro Toy Car</h1>
+    <p>Edit price and Stock, then create your car.</p>
+</header>
+
+<!-- Main container holding form and output side by side -->
+<main class="main-container">
+
+    <!-- Left side: form to input car details -->
+    <section class="form-section">
+        <div class="form-card">
+
+            <h2>Car Details</h2>
+
+              <!-- Car image -->
+            <img src="images/JADA-BTM-2016-Chevy-Camaro.jpg" 
+                 alt="2016 Chevy Camaro" class="carImage">
+
+                 <!-- Fixed info section: read-only car info -->
+                  <div class="fixed-info">
+                <h3>Fixed Information</h3>
+                <ul>
+                    <li><strong>SKU:</strong> 32993/4-JADA-BLUE</li>
+                    <li><strong>UPC:</strong> 680334698793</li>
+                    <li><strong>Brand:</strong> Chevrolet</li>
+                    <li><strong>Model:</strong> Camaro</li>
+                    <li><strong>Color:</strong> Blue</li>
+                    <li><strong>Decade:</strong> After 2000</li>
+                    <li><strong>Packaging:</strong> Window Box</li>
+                    <li><strong>Scale:</strong> 1/24 Scale</li>
+                    <li><strong>Vehicle Type:</strong> Muscle Car</li>
+                    <li><strong>Dimensions:</strong> 8.5"L x 4"W x 2.25"H</li>
+                    <li><strong>Material:</strong> Some plastic parts</li>
+                    <li><strong>Doors:</strong> Openable</li>
+                    <li><strong>Hood:</strong> Openable</li>
+                    <li><strong>Action:</strong> Freewheel Action</li>
+                    <li><strong>Series:</strong> Bigtime Muscle</li>
+                    <li><strong>Manufacturer:</strong> Jada Toys</li>
+                </ul>
+            </div>
+
+              <!-- Editable info section: user can change these before creating car -->
+             <div class="editable-info">
+                <h3>Edit These</h3>
+
+                <label>
+                    Price ($):
+                    <input id="price" type="number" value="19.99" step="0.01">
+                </label>
+                <label>Quantity: 
+                    <input id="qty" type="number" value="1" min="1">
+                </label>
+                <label><input type="checkbox" id="stock" checked> In Stock</label>
+            </div>
+
+            <!-- Button to create car object and show info -->
+            <button id="createCar">Create Car</button>
+
+        </div>
+    </section>
+
+     <!-- Right side: output section showing created car info -->
+    <section class="output-section">
+        <div class="output-card">
+            <h2>Created Car</h2>
+            <!-- Car info will appear here -->
+            <div id="carOutput"></div>
+        </div>
+    </section>
+
+</main>
+
+ <!-- Link to JS-->
+<script src="script.js"></script>
+
+</body>
+</html>
